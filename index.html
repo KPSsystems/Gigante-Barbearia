@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigante Barbearia</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Gigante Barbearia</h1>
+    </header>
+
+    <main>
+        <section id="agendamento">
+            <h2 class="agend">Agenda seu Corte</h2>
+            <img src="./img/gigante.jpg"></img>
+            <form id="form-agendamento">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+
+                <label for="horario">Horário:</label>
+                <select id="horario" name="horario" required>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                </select>
+                <label for="tipo-corte">Serviços Oferecidos:</label>
+                <select id="escolhas">
+                    <option value="Escolha uma opção">Escolha uma opção</option>
+                    <option value="Corte">Corte</option>
+                    <option value="Barba">Barba</option>
+                    <option value="Sombrancelhas">Sombrancelhas</option>
+                    <option value="Luzes">Luzes</option>
+                    <option value="Reflexo Alinhado">Reflexo Alinhado</option>
+                    <option value="Platinado">Platinado</option>
+                    <option value="Relaxamento">Relaxamento</option>
+                    <option value="Hidratação">Hidratação</option>
+                    <option value="Pigmentação">Pigmentação</option>
+                    <option value="Colaração dos cabelos brancos"> Colaração dos cabelos brancos</option>
+                </select>
+                <label for="tipo-corte">Tipo de Corte:</label>
+                <select id="escolha">
+                    <option value="Escolha uma opção">Escolha uma opção</option>
+                    <option value="Social">Social</option>
+                    <option value="Poupador">Poupador</option>
+                    <option value="Undercut">Undercut</option>
+                    <option value="Razor part">Razor part</option>
+                    <option value="Site part">Site part</option>
+                    <option value="Militar">Militar</option>
+                    <option value="Mid fade">Mid fade</option>
+                    <option value="Degradê">Degradê</option>
+                    <option value="Low Fade">Low Fade</option>
+                    <option value="Degradê">Degradê</option>
+                    <option value="Low Fade">Low Fade</option>
+                    <option value="High fade">High fade</option>
+                    <option value="Taper fade">Taper fade (também chamado como Corte  Americano)</option>
+                    <option value="Skin fade">Skin fade( navalhado ou na shaver)</option>
+                    <option value="Flat Top">Flat Top</option>
+                </select>
+                <button type="submit" onclick="agendarCorte()">Agendar</button>
+            </form>
+        </section>
+        <section id="prot">
+            <h2 class="compras">Produtos</h2>
+            <div class="produto">
+                <p class="cera">Cera Caramelo</p>
+                <img src="./img/caramelo.jpg.png" class="caramelo"></img>
+                <button onclick="comprarProduto('Cera Caramelo')">Comprar</button>
+            </div>
+            <div class="produto">
+                <p>Shampoo Masculino</p>
+                <button onclick="comprarProduto('Shampoo Masculino')">Comprar</button>
+            </div>
+            <div class="produto">
+                <p>Pente de Madeira</p>
+                <button onclick="comprarProduto('Pente de Madeira')">Comprar</button>
+            </div>
+        </section>
+    </main>
+
+  
+<script src="main.js"></script>    
+</body>
+</html>
+     
+
+
+
+
