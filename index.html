@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigante Barbearia</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Gigante Barbearia</h1>
+    </header>
+
+    <main>
+        <section id="agendamento">
+            <h2 class="agend">Agenda seu Corte</h2>
+            <img src="./img/gigante.jpg"></img>
+            <form id="form-agendamento">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+
+                <label for="horario">Horário:</label>
+                <select id="horario" name="horario" required>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="13:00">13:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                </select>
+                <label for="tipo-corte">Serviços Oferecidos:</label>
+                <select id="escolhas">
+                    <option value="Escolha uma opção">Escolha uma opção</option>
+                    <option value="Corte">Corte</option>
+                    <option value="Barba">Barba</option>
+                    <option value="Barba só na maquina">Barba só na maquina</option>
+                    <option value=" Corte e Barba"> Corte e Barba</option>
+                    <option value="Pezinho">Pezinho</option>
+                    <option value="Pezinho e Barba">Pezinho e Barba</option>
+                    <option value="Sombrancelhas">Sombrancelhas</option>
+                    <option value="Luzes">Luzes</option>
+                    <option value="Reflexo Alinhado">Reflexo Alinhado</option>
+                    <option value="Platinado">Platinado</option>
+                    <option value="Relaxamento">Relaxamento</option>
+                    <option value="Hidratação">Hidratação</option>
+                    <option value="Pigmentação">Pigmentação</option>
+                    <option value="Colaração dos cabelos brancos"> Colaração dos cabelos brancos</option>
+                </select>
+                <label for="tipo-corte">Tipo de Corte:</label>
+                <select id="escolha">
+                    <option value="Escolha uma opção">Escolha uma opção</option>
+                    <option value="Social">Social</option>
+                    <option value="Poupador">Poupador</option>
+                    <option value="Undercut">Undercut</option>
+                    <option value="Razor part">Razor part</option>
+                    <option value="Site part">Site part</option>
+                    <option value="Militar">Militar</option>
+                    <option value="Mid fade">Mid fade</option>
+                    <option value="Degradê">Degradê</option>
+                    <option value="Low Fade">Low Fade</option>
+                    <option value="Degradê">Degradê</option>
+                    <option value="Low Fade">Low Fade</option>
+                    <option value="High fade">High fade</option>
+                    <option value="Taper fade">Taper fade (também chamado como Corte  Americano)</option>
+                    <option value="Skin fade">Skin fade( navalhado ou na shaver)</option>
+                    <option value="Flat Top">Flat Top</option>
+                </select>
+                <button type="submit" onclick="agendarCorte()">Agendar</button>
+            </form>
+        </section>
+        <section id="prot">
+            <h2 class="compras">Produtos</h2>
+            <div class="produto">
+                <p class="cera">Cera Caramelo</p>
+                <img src="./img/caramelo.jpg.png" class="caramelo"></img>
+                <button onclick="comprarProduto('Cera Caramelo')" class="car">Comprar</button>
+            </div>
+            <div class="produto">
+                <p class="kit">Kit shampoo minoxidil, com Anticaspas, com Tônico capilar e pomada perolada</p>
+                <img src="./img/kit_shampo_com_minoxidil_-removebg-preview.png" class="shampoo"></img>
+                <button onclick="comprarProduto('Kit shampoo minoxidil, com Anticaspas, com Tônico capilar e pomada perolada')" class="cm">Comprar</button>
+            </div>
+            <div class="produto">
+                <p class="pomada">Pomadas modeladoras</p>
+                <img src="./img/pomadas_modelarodas-removebg-preview.png" class="mold"></img>
+                <button onclick="comprarProduto('Pomadas modeladoras')" class="brilho">Comprar</button>
+            </div>
+            <div class="produto">
+                <p class="incolor">Cera incolor</p>
+                <img src="./img/cera_incolor-removebg-preview.png" class="cer"></img>
+                <button onclick="comprarProduto('Cera incolor')" class="pm">Comprar</button>
+            </div>
+            <div class="produto">
+                <p class="perolada">Cera Perolada</p>
+                <img src="./img/cera_perolada-removebg-preview.png" class="per"></img>
+                <button onclick="comprarProduto('Cera perolada')" class="lada">Comprar</button>
+            </div>
+            <div class="produto">
+                <p class="Pasta">Pasta nuvem</p>
+                <img src="./img/pasta_nuvem-removebg-preview.png" class="nu"></img>
+                <button onclick="comprarProduto('Pasta nuvem')" class="nuve">Comprar</button>
+            </div>
+            <div class="produto">
+                <p class="em">Pomada em pó</p>
+                <img src="./img/pomada_em_pó-removebg-preview.png" class="pom"></img>
+                <button onclick="comprarProduto('Pomada em pó')" class="pd">Comprar</button>
+            </div>
+            <div class="produto">
+                <p class="kids">Pomada two brothers kids</p>
+                <img src="./img/pomada_two_brothers_kids-removebg-preview.png" class="two"></img>
+                <button onclick="comprarProduto('Pomada two brothers kids')" class="tw">Comprar</button>
+            </div>
+            <div class="produto">
+                <p class="escova">Escova plastica oval para massagem</p>
+                <img src="./img/escova_plastica_oval_para_massagem-removebg-preview.png" class="para"></img>
+                <button onclick="comprarProduto('Escova plastica oval para massagem')" class="plas">Comprar</button>
+            </div>
+            <div class="produto">
+                <p class="mini">Minoxidil</p>
+                <img src="./img/minoxidil-removebg-preview.png" class="noxi"></img>
+                <button onclick="comprarProduto('Minoxidil')" class="bg">Comprar</button>
+            </div>
+            <div class="produto">
+                <p class="esponja">Esponja nudred pra cabelos afro</p>
+                <img src="./img/anfro-removebg-preview.png" class="nudred"></img>
+                <button onclick="comprarProduto('Esponja nudred pra cabelos afro')" class="afro">Comprar</button>
+            </div>
+        </section>
+    </main>
+<script src="main.js"></script>    
+</body>
+</html>
+     
+
+
+
+
