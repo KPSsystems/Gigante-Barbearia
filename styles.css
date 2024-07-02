@@ -115,26 +115,6 @@ input {
     width: 300px;
 }
 
-.kit {
-    position: relative;
-    bottom: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-}
-
-
-.shampoo {
-    width: 170px;
-    position: relative;
-    bottom: 10px;
-    left: 10px;
-}
- .cm {
-   position: relative;
-   bottom: 10px;
-
-}
-
 .pomada {
     position: relative;
     bottom: 15px;
@@ -304,4 +284,80 @@ input {
 .afro {
     position: relative;
     bottom: 85px;
+}
+
+.em1 {
+    position: relative;
+    bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.sh {
+    width: 130px;
+    position: relative;
+    bottom: 40px;
+    left: -8px;
+}
+
+.mp {
+    position: relative;
+    bottom: 50px;
+}
+
+.an {
+    position: relative;
+    bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.sa {
+    width: 140px;
+    position: relative;
+    bottom: 40px;
+    left: -8px;
+}
+
+.cas {
+    position: relative;
+    bottom: 60px;
+}
+
+.ra {
+    position: relative;
+    bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.black {
+    width: 170px;
+    position: relative;
+    bottom: 40px;
+    left: 1px;
+}
+
+.lk {
+    position: relative;
+    bottom: 40px;
+}
+
+.bar {
+    position: relative;
+    bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.bal {
+    width: 170px;
+    position: relative;
+    bottom: 40px;
+    left: 1px;
+}
+
+.lm {
+    position: relative;
+    bottom: 40px;
 }
