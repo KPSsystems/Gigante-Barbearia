@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dataSelecionada = new Date(dataInput.value); // Convertendo para objeto Date
     const horario = document.getElementById('horario').value;
     const tipo = document.getElementById('escolha').value;
+    const servico = document.getElementById('serviços').value;
 
     // Verificar se é um domingo
     if (ehDomingo(dataSelecionada)) {
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('agendamentos', JSON.stringify(agendamentos));
 
     // Enviando para o WhatsApp
-    enviarParaWhatsApp(nome, telefone, dataSelecionada, horario, tipo);
+    enviarParaWhatsApp(nome, telefone, dataSelecionada, horario, tipo, servico);
 
     // Alerta de agendamento realizado
     alert(`Agendamento feito para o dia ${formatarData(dataSelecionada)} às ${horario}.`);
@@ -64,13 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
     marcarDiasNoCalendario();
   }
 
-  function enviarParaWhatsApp(nome, telefone, data, horario, tipo) {
+  function enviarParaWhatsApp(nome, telefone, data, horario, tipo, servico) {
     const mensagem = `Olá, gostaria de marcar um corte:
 Nome: ${nome}
 Telefone: ${telefone}
 Data: ${formatarData(data)} 
 Horário: ${horario}
-Tipo de Corte: ${tipo}`;
+Tipo de Corte: ${tipo}
+Serviço: ${servico}`;
 
     const numeroWhatsApp = '5534999064875'; // Insira o número da barbearia aqui
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
