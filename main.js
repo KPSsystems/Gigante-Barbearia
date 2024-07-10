@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Verificar se é horário de almoço
     if (ehHorarioDeAlmoco(horario)) {
-      alert('A barbearia está fechada para almoço das 12:00 às 13:00.');
+      alert('A barbearia está fechada para almoço das 11:00 às 13:00.');
       return;
     }
 
@@ -131,7 +131,9 @@ Serviço: ${servico}`;
   }
 
   function ehHorarioDeAlmoco(horario) {
-    return horario === '12:00';
+    // Definindo os horários de almoço
+    const horariosDeAlmoco = ['11:00', '11:40', '12:00', '12:40'];
+    return horariosDeAlmoco.includes(horario);
   }
 
   function alertaFechadoDomingos(data) {
