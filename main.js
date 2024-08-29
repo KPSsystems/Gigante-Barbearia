@@ -114,6 +114,11 @@ Serviço: ${servico}`;
   }
 
   function marcarDiaNoCalendario(ano, mes, dia) {
+    // Ajustar o formato do mês para dois dígitos
+    mes = mes.toString().padStart(2, '0');
+    // Ajustar o formato do dia para dois dígitos
+    dia = dia.toString().padStart(2, '0');
+    
     const diaElement = document.querySelector(`.calendar-day[data-date="${ano}-${mes}-${dia}"]`);
     if (diaElement) {
       diaElement.style.backgroundColor = 'yellow';
